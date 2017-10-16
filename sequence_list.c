@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 typedef struct LNode *List
 struct LNode{
     ElementType Data[MAXSIZE];
@@ -50,8 +48,4 @@ void Delete(int i, List PtrL){
     for(j = i; j <= PtrL->last; j++)
         PtrL->Data[i-1] = PtrL->Data[i];
     PtrL->last--;
-}
-int main(){
-
-    return 0;
 }
