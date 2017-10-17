@@ -1,12 +1,14 @@
-typedef struct LNode *List
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct LNode *List;
 struct LNode{
     ElementType Data[MAXSIZE];
     int last; //数组下标最后一位
-}
+};
 struct LNode L;
 
 //初始化（建立空的顺序表）
-List MakeEmpty{
+List MakeEmpty(){
     List PtrL;
     PtrL = (List)malloc(sizeof(struct LNode));
     PtrL->last = -1;
